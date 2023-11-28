@@ -1,0 +1,41 @@
+<mat-card class="card">
+  <form [formGroup]="booksForm" (ngSubmit)="save()">
+    <div class="grid-container">
+      <mat-form-field appearance="outline">
+        <mat-label>Автор</mat-label>
+        <mat-select formControlName="author">
+          <mat-option
+            *ngFor="let author of authors"
+            [value]="author.last_name"
+          >
+            {{ author.last_name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Название</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Издатель</mat-label>
+        <input matInput formControlName="publisher">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Год</mat-label>
+        <input matInput formControlName="year" placeholder="2023">
+        <mat-error *ngIf="booksForm.get('year')?.hasError('notANumber')">
+          Год должен быть числом.
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      (click)="save()"
+    >
+      Добавить книгу
+    </button>
+  </form>
+</mat-card>

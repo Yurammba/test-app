@@ -1,0 +1,34 @@
+<mat-card class="card">
+  <form [formGroup]="authorForm" (ngSubmit)="save()">
+    <div class="grid-container">
+      <mat-form-field appearance="outline">
+        <mat-label>Имя</mat-label>
+        <input matInput formControlName="first_name">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Фамилия</mat-label>
+        <input matInput formControlName="last_name">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Отчество</mat-label>
+        <input matInput formControlName="father_name">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>ДД.ММ.ГГГГ</mat-label>
+        <input matInput formControlName="birthday" placeholder="Дата рождения">
+        <mat-error *ngIf="authorForm.get('birthday')?.hasError('pattern')">
+          Пример: 01.01.2023
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      (click)="save()"
+    >
+      Добавить автора
+    </button>
+  </form>
+</mat-card>

@@ -1,0 +1,15 @@
+button {
+  display: flex;
+  width: 80%;
+  margin: 0 auto 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 0;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
