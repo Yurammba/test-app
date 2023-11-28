@@ -10,6 +10,7 @@ import {Router} from "@angular/router";
 export class AuthorsAddComponent implements OnInit {
   authorForm!: FormGroup;
   authors: any[] = [];
+  alertShown: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -42,6 +43,11 @@ export class AuthorsAddComponent implements OnInit {
         this.authors = storedAuthors;
         this.authorForm.reset();
         this.router.navigate(['/']);
+      } else {
+        if (!this.alertShown) {
+          this.alertShown = true;
+          alert('Такой автор уже существует!');
+        }
       }
     }
   }
