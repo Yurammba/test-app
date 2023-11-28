@@ -8,6 +8,8 @@
             *ngFor="let author of authors"
             [value]="author.last_name"
           >
+            {{ author.first_name }}
+            {{ author.father_name }}
             {{ author.last_name }}
           </mat-option>
         </mat-select>
