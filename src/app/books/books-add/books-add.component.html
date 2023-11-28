@@ -24,7 +24,7 @@
         <mat-label>Год</mat-label>
         <input matInput formControlName="year" placeholder="2023">
         <mat-error *ngIf="booksForm.get('year')?.hasError('notANumber')">
-          Год должен быть числом.
+          Пример: 2023
         </mat-error>
       </mat-form-field>
     </div>
