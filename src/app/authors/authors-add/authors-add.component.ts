@@ -53,8 +53,8 @@ export class AuthorsAddComponent implements OnInit {
   }
 
   generateUniqueId(existingAuthors: any[]): number {
-    const lastId = existingAuthors.length > 0 ? Math.max(...existingAuthors.map(author => author.id)) : 0;
-    return lastId + 1;
+    const lastId = existingAuthors.length > 0 ? Math.max(...existingAuthors.map(author => author.id)) + 1 : 0;
+    return lastId;
   }
 
   isAuthorUnique(newAuthor: any, existingAuthors: any[]): boolean {

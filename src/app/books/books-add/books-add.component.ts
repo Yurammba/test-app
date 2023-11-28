@@ -42,8 +42,8 @@ export class BooksAddComponent implements OnInit {
   }
 
   generateUniqueId(existingBooks: any[]): number {
-    const lastId = existingBooks.length > 0 ? Math.max(...existingBooks.map(book => book.id)) : 0;
-    return lastId + 1;
+    const lastId = existingBooks.length > 0 ? Math.max(...existingBooks.map(book => book.id)) + 1 : 0;
+    return lastId;
   }
 
   save() {
