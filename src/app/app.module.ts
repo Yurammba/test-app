@@ -20,6 +20,7 @@ import {MatSortModule} from "@angular/material/sort";
 import {MatSelectModule} from "@angular/material/select";
 import { AuthorsAddComponent } from './authors/authors-add/authors-add.component';
 import { BooksAddComponent } from './books/books-add/books-add.component';
+import { AuthorFormPipe } from './pipes/author-form.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import { BooksAddComponent } from './books/books-add/books-add.component';
     AuthorsComponent,
     BooksComponent,
     AuthorsAddComponent,
-    BooksAddComponent
+    BooksAddComponent,
+    BooksComponent,
+    AuthorFormPipe,
   ],
   imports: [
     BrowserModule,

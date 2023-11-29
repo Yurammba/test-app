@@ -37,6 +37,7 @@ export class BooksComponent implements OnInit, AfterViewInit {
         ]
       ]
     })
+
     this.books = JSON.parse(localStorage.getItem('books') || '[]');
     this.dataSource = new MatTableDataSource(this.books);
   }

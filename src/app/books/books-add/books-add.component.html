@@ -6,7 +6,11 @@
         <mat-select formControlName="author">
           <mat-option
             *ngFor="let author of authors"
-            [value]="author.last_name"
+            [value]="[
+            author.last_name,
+            author.first_name,
+            author.father_name
+            ]"
           >
             {{ author.first_name }}
             {{ author.father_name }}
