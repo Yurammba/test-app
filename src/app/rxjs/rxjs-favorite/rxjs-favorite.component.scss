@@ -1,0 +1,26 @@
+img {
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 999px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 645px) {
+    grid-template-columns: 1fr;
+  }
+}
+.card-content {
+  width: 268px;
+  height: 60px;
+}
