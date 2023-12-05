@@ -1,0 +1,43 @@
+<button
+  mat-raised-button
+  color="primary"
+  class="btn-favorite"
+  (click)="favorite()"
+>
+  Любимое
+</button>
+
+<div class="grid-container">
+  <div *ngFor="let card of cards; let i = index" loading='lazy'>
+    <mat-card class="card">
+      <img mat-card-image [src]="card.url" alt="image">
+      <mat-card-content class="card-content">
+        <p>
+          {{ card.title }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button
+          mat-flat-button
+          class="btn-action"
+          [color]="card.favorites ? 'accent' : 'primary'"
+
+          (click)="toggleFavorite(i)"
+        >
+          {{ card.favorites ? 'Убрать из любимого' : 'Добавить в любимое' }}
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+<button
+  mat-raised-button
+  color="primary"
+  (click)="loadMoreVideos()"
+  class="btn-more"
+>
+  Загрузить еще
+</button>
+
+
