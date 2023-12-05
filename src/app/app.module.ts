@@ -21,6 +21,9 @@ import {MatSelectModule} from "@angular/material/select";
 import { AuthorsAddComponent } from './authors/authors-add/authors-add.component';
 import { BooksAddComponent } from './books/books-add/books-add.component';
 import { AuthorFormPipe } from './pipes/author-form.pipe';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RxjsFavoriteComponent } from './rxjs/rxjs-favorite/rxjs-favorite.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,8 @@ import { AuthorFormPipe } from './pipes/author-form.pipe';
     BooksAddComponent,
     BooksComponent,
     AuthorFormPipe,
+    RxjsComponent,
+    RxjsFavoriteComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +53,7 @@ import { AuthorFormPipe } from './pipes/author-form.pipe';
     MatTabsModule,
     MatSortModule,
     MatSelectModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  links = ['authors', 'books'];
+  links = ['authors', 'books', 'rxjs'];
 }
