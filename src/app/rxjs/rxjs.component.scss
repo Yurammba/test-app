@@ -8,7 +8,7 @@ img {
 .btn-favorite {
   display: flex;
   min-width: 300px;
-  margin-bottom:  10px;
+  margin-bottom: 10px;
   margin-left: 320px;
 
   @media screen and (max-width: 999px) {
@@ -31,6 +31,7 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
 .card-content {
   width: 268px;
   height: 60px;
