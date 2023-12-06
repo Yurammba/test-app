@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class RxjsFavoriteComponent implements OnInit {
   favoritesData: any[] = [];
+
   ngOnInit(): void {
     const savedData = localStorage.getItem('saveData');
     if (savedData) {

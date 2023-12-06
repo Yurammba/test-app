@@ -1,25 +1,25 @@
 <ng-container *ngIf="favoritesData.length > 0; else noFavorites">
-<div class="grid-container">
-  <div *ngFor="let item of favoritesData; let i = index" loading='lazy'>
-    <mat-card class="card">
-      <img mat-card-image [src]="item.url" alt="image">
-      <mat-card-content class="card-content">
-        <p>
-          {{ item.title }}
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button
-          mat-flat-button
-          color="accent"
-          (click)="removeFromFavorites(i)"
-        >
-          {{ item.favorites ? 'Убрать из любимого' : 'Добавить в любимое' }}
-        </button>
-      </mat-card-actions>
-    </mat-card>
+  <div class="grid-container">
+    <div *ngFor="let item of favoritesData; let i = index">
+      <mat-card class="card">
+        <img mat-card-image [src]="item?.videoThumbnails" alt="image">
+        <mat-card-content class="card-content">
+          <p>
+            {{ item.title }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button
+            mat-flat-button
+            color="accent"
+            (click)="removeFromFavorites(i)"
+          >
+            {{ item.favorites ? 'Убрать из любимого' : 'Добавить в любимое' }}
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
   </div>
-</div>
 </ng-container>
 
 <ng-template #noFavorites>
